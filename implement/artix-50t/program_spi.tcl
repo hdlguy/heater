@@ -1,3 +1,4 @@
+disconnect_hw_server -quiet
 open_hw
 connect_hw_server
 open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers]] 0]
@@ -6,7 +7,8 @@ open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers]] 0]
 current_hw_device [lindex [get_hw_devices] 0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
 refresh_hw_device [lindex [get_hw_devices] 0]
-create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev  [lindex [get_cfgmem_parts {n25q256-3.3v-spi-x1_x2_x4}] 0]
+#create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev  [lindex [get_cfgmem_parts {n25q256-3.3v-spi-x1_x2_x4}] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev  [lindex [get_cfgmem_parts {mt25ql256-spi-x1_x2_x4}] 0]
 set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices] 0 ]]
 set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices] 0 ]]
 set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices] 0 ]]
