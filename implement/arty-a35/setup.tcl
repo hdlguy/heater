@@ -3,7 +3,8 @@ close_project -quiet
 file delete -force proj.xpr *.os *.jou *.log proj.srcs proj.cache proj.runs
 #
 create_project -force proj 
-set_property part xc7a50tftg256-1 [current_project]
+#set_property part xc7a50tftg256-1 [current_project]
+set_property board_part digilentinc.com:arty-a7-35:part0:1.0 [current_project]
 set_property target_language verilog [current_project]
 set_property default_lib work [current_project]
 load_features ipintegrator
@@ -21,11 +22,11 @@ read_verilog -sv [glob ../../source/lfsr.v]
 read_verilog -sv [glob ../../source/lfsr_generator.v]
 read_verilog -sv [glob ../../source/lfsr_checker.v]
 read_verilog -sv [glob ../../source/heater.v]
-read_verilog -sv [glob ../../source/artix_top.v]
+read_verilog -sv [glob ../../source/arty_top.v]
 
-read_xdc ../../source/artix_top.xdc
-read_xdc ../..//source/artix_top_late.xdc
-set_property used_in_synthesis false [get_files  ../../source/artix_top_late.xdc]
+read_xdc ../../source/arty_top.xdc
+read_xdc ../..//source/arty_top_late.xdc
+set_property used_in_synthesis false [get_files  ../../source/arty_top_late.xdc]
 
 close_project
 
