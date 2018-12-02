@@ -12,7 +12,9 @@ There are many reasons for wanting a design that does nothing other than toggle 
 ## design
 This design is written in Systemverilog and compiled with Xilinx Vivado tools.  It provides a parameterized number of channels of power burning pipelines. Also, each channel is parameterized with respect to the number of LUT, DSP48 and BRAM that are used.
 
-Artix_top.v is the top level source for the Artix-50 version of the design. A VIO is used to control the number of channels that are enabled so that power consumption can be controlled at run-time.
+Artix_top.v is the top level source for the Artix-50 version of the design. arty_top.v is the top level source for the Digilent Arty A7 version of the design. 
+
+A VIO is used to control the number of channels that are enabled so that power consumption can be controlled at run-time. The VIO is also used to reset the error checker.
 
 Build instructions are in the implement folder.
 ## results
