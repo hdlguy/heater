@@ -8,7 +8,12 @@
 // A checker is at the end of the pipe to verify that the logic is running error free.
 // Use with caution. Such a design can easily exceed current and thermal limitations 
 // of a board.
-module heater (
+module heater #(
+    parameter Nsrl = 6,
+    parameter Nbram = 4,
+    parameter Ndsp = 6,
+    parameter Npipe = 64
+)(
     input   logic               clk,
     input   logic               enable,
     input   logic               err_clear,
@@ -23,7 +28,7 @@ module heater (
     lfsr_generator lfsr_gen_inst(.clk(clk), .reset(reset), .dv_in(1), .dv_out(), .dataout(lfsr_dout));
 
     // some srl delays
-    localparam Nsrl = 6;
+    //localparam Nsrl = 6;
     logic [Nsrl-1:0][31:0] srl_dout;
     srl32 srl32_0(.CLK(clk), .D(lfsr_dout), .Q(srl_dout[0]));
     genvar i,j;  
@@ -32,7 +37,7 @@ module heater (
     end endgenerate
 
     // some BRAM delays
-    localparam Nbram = 4;
+    //localparam Nbram = 4;
     logic [Nbram-1:0][31:0] bram_dout;
     (* dont_touch="true" *)logic [Nbram-1:0][9:0] count;
     generate for (i=0;i<Nbram;i++) begin: gen_count
@@ -44,7 +49,7 @@ module heater (
     end endgenerate
 
     // some DSP48 delays
-    localparam Ndsp = 6;
+    //localparam Ndsp = 6;
     logic [Ndsp-1:0][47:0] dsp_dout, dsp_dout_q;
     dsp_nop dsp_0(.CLK(clk), .D(0), .C({16'd0, bram_dout[Nbram-1]}), .P(dsp_dout[0]));
     always_ff @(posedge clk) dsp_dout_q[0] <= dsp_dout[0];
@@ -54,7 +59,7 @@ module heater (
     end endgenerate
 
     // some pipeline registers
-    localparam Npipe = 64;
+    //localparam Npipe = 64;
     logic [Npipe-1:0][31:0] ff_dout;
     always_ff @(posedge clk) ff_dout[0] <= dsp_dout_q[Ndsp-1][31:0];
     generate  for (i=1; i<Npipe; i++) begin: gen_reg  

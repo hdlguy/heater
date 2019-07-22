@@ -16,7 +16,7 @@ module artix_top (
 
     genvar i;  
     generate  for (i=0; i<N; i++) begin: gen_code_label  
-        heater heater_inst(.clk(clk300), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
+        heater #(.Nsrl(6), .Nbram(4), .Ndsp(6), .Npipe(64)) heater_inst(.clk(clk300), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
     end  endgenerate 
 
     artix_vio vio_inst( .clk(clk100), .probe_in0(heater_error), .probe_out0(heater_err_clear), .probe_out1(heater_enable) );
