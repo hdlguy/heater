@@ -14,7 +14,7 @@ module top (
 
     genvar i;  
     generate  for (i=0; i < N; i++) begin: gen_code_label  
-        heater #(.Nsrl(6), .Nbram(4), .Ndsp(6), .Npipe(48)) heater_inst(.clk(clk), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
+        heater #(.Nsrl(12), .Nbram(6), .Ndsp(11), .Npipe(80)) heater_inst(.clk(clk), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
     end  endgenerate 
     
     // the Zynq is here just to provide axiclk.

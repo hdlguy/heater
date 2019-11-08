@@ -13,7 +13,6 @@ file delete -force ./ip
 file mkdir ./ip
 
 read_ip ../../source/clk_wiz_0/clk_wiz_0.xci
-read_ip ../../source/vio_0/vio_0.xci
 read_ip ../../source/dsp_nop/dsp_nop.xci
 read_ip ../../source/sp_bram/sp_bram.xci
 read_ip ../../source/srl32/srl32.xci
