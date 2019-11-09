@@ -9,9 +9,9 @@
 // Use with caution. Such a design can easily exceed current and thermal limitations 
 // of a board.
 module heater #(
-    parameter Nsrl = 6,
+    parameter Nsrl  = 6,
     parameter Nbram = 4,
-    parameter Ndsp = 6,
+    parameter Ndsp  = 6,
     parameter Npipe = 64
 )(
     input   logic               clk,
@@ -19,13 +19,9 @@ module heater #(
     input   logic               err_clear,
     output  logic               error);
     
-    logic  reset, reset_pre;
-    always_ff @(posedge clk) reset_pre <= ~enable;
-    always_ff @(posedge clk) reset <= reset_pre;
-    
     // an lfsr data source
     logic [31:0] lfsr_dout;    
-    lfsr_generator lfsr_gen_inst(.clk(clk), .reset(reset), .dv_in(1), .dv_out(), .dataout(lfsr_dout));
+    lfsr_generator lfsr_gen_inst(.clk(clk), .reset(1'b0), .dv_in(1), .dv_out(), .dataout(lfsr_dout));
 
     // some srl delays
     //localparam Nsrl = 6;
@@ -69,7 +65,9 @@ module heater #(
     end  endgenerate 
     
     // an lsfr data checker
-    lfsr_checker lfsr_check_inst(.clk(clk), .reset(err_clear), .datain(ff_dout[Npipe-1]), .error(error));
+    logic err_clear_q;
+    always_ff @(posedge clk) err_clear_q <= err_clear;
+    lfsr_checker lfsr_check_inst(.clk(clk), .reset(err_clear_q), .datain(ff_dout[Npipe-1]), .error(error));
 
 endmodule
 

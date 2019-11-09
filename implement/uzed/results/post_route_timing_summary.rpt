@@ -1,0 +1,829 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date              : Sat Nov  9 07:08:38 2019
+| Host              : pedro-mini-itx running 64-bit Ubuntu 18.04.3 LTS
+| Command           : report_timing_summary -file ./results/post_route_timing_summary.rpt
+| Design            : top
+| Device            : xczu3eg-sfva625
+| Speed File        : -1  PRODUCTION 1.25 05-09-2019
+| Temperature Grade : I
+------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.355        0.000                      0               157823        0.010        0.000                      0               157823        0.261        0.000                       0                128836  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                        Waveform(ns)         Period(ns)      Frequency(MHz)
+-----                        ------------         ----------      --------------
+clk_pl_0                     {0.000 5.000}        10.000          100.000         
+clk_wiz_inst/inst/clk_in100  {0.000 5.000}        10.000          100.000         
+  clk_out_clk_wiz_uzed       {0.000 1.000}        2.000           500.000         
+  clkfbout_clk_wiz_uzed      {0.000 5.000}        10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                            WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                            -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_pl_0                           5.648        0.000                      0                 4927        0.016        0.000                      0                 4927        3.500        0.000                       0                  2078  
+clk_wiz_inst/inst/clk_in100                                                                                                                                                    2.000        0.000                       0                     1  
+  clk_out_clk_wiz_uzed             0.355        0.000                      0               152768        0.010        0.000                      0               152768        0.261        0.000                       0                126754  
+  clkfbout_clk_wiz_uzed                                                                                                                                                        8.501        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock            To Clock                  WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------            --------                  -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+clk_pl_0              clk_out_clk_wiz_uzed        0.356        0.000                      0                   32        0.116        0.000                      0                   32  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  clk_pl_0           clk_pl_0                 8.547        0.000                      0                   96        0.174        0.000                      0                   96  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_pl_0
+  To Clock:  clk_pl_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.648ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.016ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.648ns  (required time - arrival time)
+  Source:                 system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/first_mi_word_reg/C
+                            (rising edge-triggered cell FDSE clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP2RDATA[47]
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pl_0 rise@10.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.225ns  (logic 0.423ns (13.116%)  route 2.802ns (86.884%))
+  Logic Levels:           3  (LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.127ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.708ns = ( 11.708 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.995ns
+    Clock Pessimism Removal (CPR):    0.160ns
+  Clock Uncertainty:      0.130ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.250ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.788ns (routing 0.638ns, distribution 1.150ns)
+  Clock Net Delay (Destination): 1.541ns (routing 0.576ns, distribution 0.965ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.178     0.178    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.029     0.207 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.788     1.995    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/CLK
+    SLICE_X2Y146         FDSE                                         r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/first_mi_word_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y146         FDSE (Prop_HFF_SLICEL_C_Q)
+                                                      0.096     2.091 r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/first_mi_word_reg/Q
+                         net (fo=19, routed)          0.869     2.960    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/first_word
+    SLICE_X6Y154         LUT4 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.062     3.022 r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/s_axi_rdata[63]_INST_0_i_2/O
+                         net (fo=3, routed)           0.436     3.458    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/current_word_1_reg[2]_0
+    SLICE_X2Y152         LUT6 (Prop_G6LUT_SLICEL_I0_O)
+                                                      0.147     3.605 r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/s_axi_rdata[63]_INST_0_i_1/O
+                         net (fo=66, routed)          0.958     4.563    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/goreg_dm.dout_i_reg[19]
+    SLICE_X0Y132         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.118     4.681 r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_data_inst/s_axi_rdata[47]_INST_0/O
+                         net (fo=1, routed)           0.539     5.220    system_i/zynq_ultra_ps_e_0/inst/maxigp2_rdata[47]
+    PS8_X0Y0             PS8                                          r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP2RDATA[47]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                     10.000    10.000 r  
+    PS8_X0Y0             PS8                          0.000    10.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.140    10.140    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.027    10.167 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.541    11.708    system_i/zynq_ultra_ps_e_0/inst/maxihpm0_lpd_aclk
+    PS8_X0Y0             PS8                                          r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP2ACLK
+                         clock pessimism              0.160    11.868    
+                         clock uncertainty           -0.130    11.738    
+    PS8_X0Y0             PS8 (Setup_PS8_MAXIGP2ACLK_MAXIGP2RDATA[47])
+                                                     -0.870    10.868    system_i/zynq_ultra_ps_e_0/inst/PS8_i
+  -------------------------------------------------------------------
+                         required time                         10.868    
+                         arrival time                          -5.220    
+  -------------------------------------------------------------------
+                         slack                                  5.648    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.016ns  (arrival time - required time)
+  Source:                 system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio2_Data_In_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system_i/axi_gpio_1/U0/gpio_core_1/Dual.ALLIN0_ND_G2.READ_REG2_GEN[22].reg3_reg[22]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.300ns  (logic 0.098ns (32.667%)  route 0.202ns (67.333%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.231ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.018ns
+    Source Clock Delay      (SCD):    1.685ns
+    Clock Pessimism Removal (CPR):    0.102ns
+  Clock Net Delay (Source):      1.518ns (routing 0.576ns, distribution 0.942ns)
+  Clock Net Delay (Destination): 1.811ns (routing 0.638ns, distribution 1.173ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.140     0.140    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.027     0.167 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.518     1.685    system_i/axi_gpio_1/U0/gpio_core_1/s_axi_aclk
+    SLICE_X12Y109        FDRE                                         r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio2_Data_In_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X12Y109        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.070     1.755 r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio2_Data_In_reg[22]/Q
+                         net (fo=1, routed)           0.174     1.929    system_i/axi_gpio_1/U0/gpio_core_1/gpio2_Data_In[22]
+    SLICE_X11Y126        LUT5 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.028     1.957 r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.ALLIN0_ND_G2.READ_REG2_GEN[22].reg3[22]_i_1/O
+                         net (fo=1, routed)           0.028     1.985    system_i/axi_gpio_1/U0/gpio_core_1/Read_Reg2_In[22]
+    SLICE_X11Y126        FDRE                                         r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.ALLIN0_ND_G2.READ_REG2_GEN[22].reg3_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.178     0.178    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.029     0.207 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.811     2.018    system_i/axi_gpio_1/U0/gpio_core_1/s_axi_aclk
+    SLICE_X11Y126        FDRE                                         r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.ALLIN0_ND_G2.READ_REG2_GEN[22].reg3_reg[22]/C
+                         clock pessimism             -0.102     1.916    
+    SLICE_X11Y126        FDRE (Hold_HFF_SLICEL_C_D)
+                                                      0.053     1.969    system_i/axi_gpio_1/U0/gpio_core_1/Dual.ALLIN0_ND_G2.READ_REG2_GEN[22].reg3_reg[22]
+  -------------------------------------------------------------------
+                         required time                         -1.969    
+                         arrival time                           1.985    
+  -------------------------------------------------------------------
+                         slack                                  0.016    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_pl_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0] }
+
+Check Type        Corner  Lib Pin          Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     PS8/MAXIGP2ACLK  n/a            3.000         10.000      7.000      PS8_X0Y0  system_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP2ACLK
+Low Pulse Width   Fast    PS8/MAXIGP2ACLK  n/a            1.500         5.000       3.500      PS8_X0Y0  system_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP2ACLK
+High Pulse Width  Slow    PS8/MAXIGP2ACLK  n/a            1.500         5.000       3.500      PS8_X0Y0  system_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP2ACLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_wiz_inst/inst/clk_in100
+  To Clock:  clk_wiz_inst/inst/clk_in100
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        2.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_wiz_inst/inst/clk_in100
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_wiz_inst/inst/clk_in100 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location   Pin
+Min Period        n/a     MMCME4_ADV/CLKIN1  n/a            1.250         10.000      8.750      MMCM_X0Y0  clk_wiz_inst/inst/mmcme4_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME4_ADV/CLKIN1  n/a            3.000         5.000       2.000      MMCM_X0Y0  clk_wiz_inst/inst/mmcme4_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME4_ADV/CLKIN1  n/a            3.000         5.000       2.000      MMCM_X0Y0  clk_wiz_inst/inst/mmcme4_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out_clk_wiz_uzed
+  To Clock:  clk_out_clk_wiz_uzed
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.355ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.010ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.261ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.355ns  (required time - arrival time)
+  Source:                 gen_code_label[15].heater_inst/gen_reg[59].gen_ff[4].FDRE_inst/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_wiz_uzed  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            gen_code_label[15].heater_inst/lfsr_check_inst/compare_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_wiz_uzed  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk_out_clk_wiz_uzed
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (clk_out_clk_wiz_uzed rise@2.000ns - clk_out_clk_wiz_uzed rise@0.000ns)
+  Data Path Delay:        1.449ns  (logic 0.434ns (29.952%)  route 1.015ns (70.048%))
+  Logic Levels:           3  (LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.167ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.666ns = ( 3.666 - 2.000 ) 
+    Source Clock Delay      (SCD):    1.612ns
+    Clock Pessimism Removal (CPR):    -0.221ns
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.087ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.067ns (routing 0.916ns, distribution 1.151ns)
+  Clock Net Delay (Destination): 1.815ns (routing 0.836ns, distribution 0.979ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_clk_wiz_uzed rise edge)
+                                                      0.000     0.000 r  
+    BUFG_PS_X0Y56        BUFG_PS                      0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+                         net (fo=2079, routed)        1.740     1.740    clk_wiz_inst/inst/clk_in100
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.479    -0.739 r  clk_wiz_inst/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.256    -0.483    clk_wiz_inst/inst/clk_out_clk_wiz_uzed
+    BUFGCE_X0Y14         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -0.455 r  clk_wiz_inst/inst/clkout1_buf/O
+    X0Y1 (CLOCK_ROOT)    net (fo=128352, routed)      2.067     1.612    gen_code_label[15].heater_inst/clk_out
+    SLICE_X17Y56         FDRE                                         r  gen_code_label[15].heater_inst/gen_reg[59].gen_ff[4].FDRE_inst/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y56         FDRE (Prop_HFF2_SLICEL_C_Q)
+                                                      0.097     1.709 r  gen_code_label[15].heater_inst/gen_reg[59].gen_ff[4].FDRE_inst/Q
+                         net (fo=2, routed)           0.545     2.254    gen_code_label[15].heater_inst/lfsr_check_inst/ff_dout[59]_25[4]
+    SLICE_X14Y65         LUT6 (Prop_H6LUT_SLICEM_I4_O)
+                                                      0.151     2.405 r  gen_code_label[15].heater_inst/lfsr_check_inst/compare_i_12__11/O
+                         net (fo=1, routed)           0.260     2.665    gen_code_label[15].heater_inst/lfsr_check_inst/compare_i_12__11_n_0
+    SLICE_X12Y64         LUT6 (Prop_F6LUT_SLICEL_I4_O)
+                                                      0.039     2.704 r  gen_code_label[15].heater_inst/lfsr_check_inst/compare_i_5__11/O
+                         net (fo=1, routed)           0.152     2.856    gen_code_label[15].heater_inst/lfsr_check_inst/compare_i_5__11_n_0
+    SLICE_X12Y64         LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.147     3.003 r  gen_code_label[15].heater_inst/lfsr_check_inst/compare_i_1__11/O
+                         net (fo=1, routed)           0.058     3.061    gen_code_label[15].heater_inst/lfsr_check_inst/compare_i_1__11_n_0
+    SLICE_X12Y64         FDRE                                         r  gen_code_label[15].heater_inst/lfsr_check_inst/compare_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_wiz_uzed rise edge)
+                                                      2.000     2.000 r  
+    BUFG_PS_X0Y56        BUFG_PS                      0.000     2.000 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+                         net (fo=2079, routed)        1.554     3.554    clk_wiz_inst/inst/clk_in100
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.954     1.600 r  clk_wiz_inst/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.227     1.827    clk_wiz_inst/inst/clk_out_clk_wiz_uzed
+    BUFGCE_X0Y14         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.851 r  clk_wiz_inst/inst/clkout1_buf/O
+    X0Y1 (CLOCK_ROOT)    net (fo=128352, routed)      1.815     3.666    gen_code_label[15].heater_inst/lfsr_check_inst/clk_out
+    SLICE_X12Y64         FDRE                                         r  gen_code_label[15].heater_inst/lfsr_check_inst/compare_reg/C
+                         clock pessimism             -0.221     3.445    
+                         clock uncertainty           -0.056     3.389    
+    SLICE_X12Y64         FDRE (Setup_DFF_SLICEL_C_D)
+                                                      0.027     3.416    gen_code_label[15].heater_inst/lfsr_check_inst/compare_reg
+  -------------------------------------------------------------------
+                         required time                          3.416    
+                         arrival time                          -3.061    
+  -------------------------------------------------------------------
+                         slack                                  0.355    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.010ns  (arrival time - required time)
+  Source:                 gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[0][23]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_wiz_uzed  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[32][23]_srl32/D
+                            (rising edge-triggered cell SRLC32E clocked by clk_out_clk_wiz_uzed  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk_out_clk_wiz_uzed
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out_clk_wiz_uzed rise@0.000ns - clk_out_clk_wiz_uzed rise@0.000ns)
+  Data Path Delay:        0.236ns  (logic 0.070ns (29.661%)  route 0.166ns (70.339%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.172ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.665ns
+    Source Clock Delay      (SCD):    1.660ns
+    Clock Pessimism Removal (CPR):    -0.167ns
+  Clock Net Delay (Source):      1.809ns (routing 0.836ns, distribution 0.973ns)
+  Clock Net Delay (Destination): 2.120ns (routing 0.916ns, distribution 1.204ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_clk_wiz_uzed rise edge)
+                                                      0.000     0.000 r  
+    BUFG_PS_X0Y56        BUFG_PS                      0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+                         net (fo=2079, routed)        1.554     1.554    clk_wiz_inst/inst/clk_in100
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.954    -0.400 r  clk_wiz_inst/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.227    -0.173    clk_wiz_inst/inst/clk_out_clk_wiz_uzed
+    BUFGCE_X0Y14         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -0.149 r  clk_wiz_inst/inst/clkout1_buf/O
+    X0Y1 (CLOCK_ROOT)    net (fo=128352, routed)      1.809     1.660    gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/clk
+    SLICE_X23Y20         FDRE                                         r  gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[0][23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y20         FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.070     1.730 r  gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[0][23]/Q
+                         net (fo=1, routed)           0.166     1.896    gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg_n_0_[0][23]
+    SLICE_X24Y20         SRLC32E                                      r  gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[32][23]_srl32/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_wiz_uzed rise edge)
+                                                      0.000     0.000 r  
+    BUFG_PS_X0Y56        BUFG_PS                      0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+                         net (fo=2079, routed)        1.740     1.740    clk_wiz_inst/inst/clk_in100
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.479    -0.739 r  clk_wiz_inst/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.256    -0.483    clk_wiz_inst/inst/clk_out_clk_wiz_uzed
+    BUFGCE_X0Y14         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -0.455 r  clk_wiz_inst/inst/clkout1_buf/O
+    X0Y1 (CLOCK_ROOT)    net (fo=128352, routed)      2.120     1.665    gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/clk
+    SLICE_X24Y20         SRLC32E                                      r  gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[32][23]_srl32/CLK
+                         clock pessimism              0.167     1.832    
+    SLICE_X24Y20         SRLC32E (Hold_B6LUT_SLICEM_CLK_D)
+                                                      0.054     1.886    gen_code_label[1].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[32][23]_srl32
+  -------------------------------------------------------------------
+                         required time                         -1.886    
+                         arrival time                           1.896    
+  -------------------------------------------------------------------
+                         slack                                  0.010    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out_clk_wiz_uzed
+Waveform(ns):       { 0.000 1.000 }
+Period(ns):         2.000
+Sources:            { clk_wiz_inst/inst/mmcme4_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.739         2.000       0.261      RAMB36_X3Y17  gen_code_label[17].heater_inst/gen_bram[3].sp_bram_1/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+Low Pulse Width   Fast    SRLC32E/CLK         n/a            0.573         1.000       0.427      SLICE_X4Y150  gen_code_label[8].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[32][19]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK         n/a            0.573         1.000       0.427      SLICE_X5Y153  gen_code_label[8].heater_inst/gen_srl[1].srl32_1/U0/i_synth/i_bb_inst/f1.only_clb.srl_sig_reg[32][0]_srl32/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_clk_wiz_uzed
+  To Clock:  clkfbout_clk_wiz_uzed
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        8.501ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_clk_wiz_uzed
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_wiz_inst/inst/mmcme4_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin   Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period  n/a     BUFGCE/I  n/a            1.499         10.000      8.501      BUFGCE_X0Y20  clk_wiz_inst/inst/clkf_buf/I
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_pl_0
+  To Clock:  clk_out_clk_wiz_uzed
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.356ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.116ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.356ns  (required time - arrival time)
+  Source:                 system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio_Data_Out_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gen_code_label[22].heater_inst/err_clear_q_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_wiz_uzed  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk_out_clk_wiz_uzed
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (clk_out_clk_wiz_uzed rise@2.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        1.259ns  (logic 0.096ns (7.625%)  route 1.163ns (92.375%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.264ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.666ns = ( 3.666 - 2.000 ) 
+    Source Clock Delay      (SCD):    1.992ns
+    Clock Pessimism Removal (CPR):    0.062ns
+  Clock Uncertainty:      0.148ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.097ns
+    Phase Error              (PE):    0.087ns
+  Clock Net Delay (Source):      1.785ns (routing 0.638ns, distribution 1.147ns)
+  Clock Net Delay (Destination): 1.815ns (routing 0.836ns, distribution 0.979ns)
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.178     0.178    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.029     0.207 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.785     1.992    system_i/axi_gpio_1/U0/gpio_core_1/s_axi_aclk
+    SLICE_X11Y125        FDRE                                         r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio_Data_Out_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y125        FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.096     2.088 r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio_Data_Out_reg[9]/Q
+                         net (fo=2, routed)           1.163     3.251    gen_code_label[22].heater_inst/GPIO1_out_tri_o[0]
+    SLICE_X21Y58         FDRE                                         r  gen_code_label[22].heater_inst/err_clear_q_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_wiz_uzed rise edge)
+                                                      2.000     2.000 r  
+    BUFG_PS_X0Y56        BUFG_PS                      0.000     2.000 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+                         net (fo=2079, routed)        1.554     3.554    clk_wiz_inst/inst/clk_in100
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.954     1.600 r  clk_wiz_inst/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.227     1.827    clk_wiz_inst/inst/clk_out_clk_wiz_uzed
+    BUFGCE_X0Y14         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.851 r  clk_wiz_inst/inst/clkout1_buf/O
+    X0Y1 (CLOCK_ROOT)    net (fo=128352, routed)      1.815     3.666    gen_code_label[22].heater_inst/clk_out
+    SLICE_X21Y58         FDRE                                         r  gen_code_label[22].heater_inst/err_clear_q_reg/C
+                         clock pessimism              0.062     3.728    
+                         clock uncertainty           -0.148     3.580    
+    SLICE_X21Y58         FDRE (Setup_DFF_SLICEL_C_D)
+                                                      0.027     3.607    gen_code_label[22].heater_inst/err_clear_q_reg
+  -------------------------------------------------------------------
+                         required time                          3.607    
+                         arrival time                          -3.251    
+  -------------------------------------------------------------------
+                         slack                                  0.356    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.116ns  (arrival time - required time)
+  Source:                 system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio_Data_Out_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gen_code_label[8].heater_inst/err_clear_q_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_wiz_uzed  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk_out_clk_wiz_uzed
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_clk_wiz_uzed rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.121ns  (logic 0.037ns (30.579%)  route 0.084ns (69.421%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.190ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.873ns
+    Source Clock Delay      (SCD):    1.022ns
+    Clock Pessimism Removal (CPR):    0.041ns
+  Clock Uncertainty:      0.148ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.097ns
+    Phase Error              (PE):    0.087ns
+  Clock Net Delay (Source):      0.911ns (routing 0.324ns, distribution 0.587ns)
+  Clock Net Delay (Destination): 1.200ns (routing 0.512ns, distribution 0.688ns)
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.094     0.094    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.017     0.111 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        0.911     1.022    system_i/axi_gpio_1/U0/gpio_core_1/s_axi_aclk
+    SLICE_X9Y126         FDRE                                         r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio_Data_Out_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y126         FDRE (Prop_FFF_SLICEM_C_Q)
+                                                      0.037     1.059 r  system_i/axi_gpio_1/U0/gpio_core_1/Dual.gpio_Data_Out_reg[23]/Q
+                         net (fo=2, routed)           0.084     1.143    gen_code_label[8].heater_inst/GPIO1_out_tri_o[0]
+    SLICE_X10Y125        FDRE                                         r  gen_code_label[8].heater_inst/err_clear_q_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_wiz_uzed rise edge)
+                                                      0.000     0.000 r  
+    BUFG_PS_X0Y56        BUFG_PS                      0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+                         net (fo=2079, routed)        0.994     0.994    clk_wiz_inst/inst/clk_in100
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.505    -0.511 r  clk_wiz_inst/inst/mmcme4_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.165    -0.346    clk_wiz_inst/inst/clk_out_clk_wiz_uzed
+    BUFGCE_X0Y14         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019    -0.327 r  clk_wiz_inst/inst/clkout1_buf/O
+    X0Y1 (CLOCK_ROOT)    net (fo=128352, routed)      1.200     0.873    gen_code_label[8].heater_inst/clk_out
+    SLICE_X10Y125        FDRE                                         r  gen_code_label[8].heater_inst/err_clear_q_reg/C
+                         clock pessimism             -0.041     0.832    
+                         clock uncertainty            0.148     0.980    
+    SLICE_X10Y125        FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.047     1.027    gen_code_label[8].heater_inst/err_clear_q_reg
+  -------------------------------------------------------------------
+                         required time                         -1.027    
+                         arrival time                           1.143    
+  -------------------------------------------------------------------
+                         slack                                  0.116    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk_pl_0
+  To Clock:  clk_pl_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        8.547ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.174ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             8.547ns  (required time - arrival time)
+  Source:                 system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/PRE
+                            (recovery check against rising-edge clock clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pl_0 rise@10.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        1.144ns  (logic 0.246ns (21.503%)  route 0.898ns (78.496%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.721ns = ( 11.721 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.988ns
+    Clock Pessimism Removal (CPR):    0.160ns
+  Clock Uncertainty:      0.130ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.250ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      1.781ns (routing 0.638ns, distribution 1.143ns)
+  Clock Net Delay (Destination): 1.554ns (routing 0.576ns, distribution 0.978ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.178     0.178    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.029     0.207 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.781     1.988    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/clk
+    SLICE_X8Y151         FDRE                                         r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y151         FDRE (Prop_AFF2_SLICEL_C_Q)
+                                                      0.099     2.087 f  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[1]/Q
+                         net (fo=2, routed)           0.243     2.330    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/sckt_wr_rst_cc[1]
+    SLICE_X8Y151         LUT3 (Prop_D6LUT_SLICEL_I0_O)
+                                                      0.147     2.477 f  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gc0.count_d1[4]_i_2/O
+                         net (fo=32, routed)          0.655     3.132    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/AR[0]
+    SLICE_X8Y145         FDPE                                         f  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                     10.000    10.000 r  
+    PS8_X0Y0             PS8                          0.000    10.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.140    10.140    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.027    10.167 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.554    11.721    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/clk
+    SLICE_X8Y145         FDPE                                         r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/C
+                         clock pessimism              0.160    11.881    
+                         clock uncertainty           -0.130    11.751    
+    SLICE_X8Y145         FDPE (Recov_CFF2_SLICEL_C_PRE)
+                                                     -0.072    11.679    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]
+  -------------------------------------------------------------------
+                         required time                         11.679    
+                         arrival time                          -3.132    
+  -------------------------------------------------------------------
+                         slack                                  8.547    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.174ns  (arrival time - required time)
+  Source:                 system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE
+                            (removal check against rising-edge clock clk_pl_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.171ns  (logic 0.061ns (35.673%)  route 0.110ns (64.327%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.160ns
+    Source Clock Delay      (SCD):    1.008ns
+    Clock Pessimism Removal (CPR):    0.135ns
+  Clock Net Delay (Source):      0.897ns (routing 0.324ns, distribution 0.573ns)
+  Clock Net Delay (Destination): 1.022ns (routing 0.365ns, distribution 0.657ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.094     0.094    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.017     0.111 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        0.897     1.008    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/clk
+    SLICE_X8Y151         FDRE                                         r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y151         FDRE (Prop_AFF_SLICEL_C_Q)
+                                                      0.039     1.047 f  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]/Q
+                         net (fo=3, routed)           0.046     1.093    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/sckt_wr_rst_cc[0]
+    SLICE_X8Y151         LUT3 (Prop_D6LUT_SLICEL_I1_O)
+                                                      0.022     1.115 f  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gc0.count_d1[4]_i_2/O
+                         net (fo=32, routed)          0.064     1.179    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg_0
+    SLICE_X8Y151         FDPE                                         f  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  system_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.120     0.120    system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y56        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.018     0.138 r  system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y1 (CLOCK_ROOT)    net (fo=2079, routed)        1.022     1.160    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/clk
+    SLICE_X8Y151         FDPE                                         r  system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/C
+                         clock pessimism             -0.135     1.025    
+    SLICE_X8Y151         FDPE (Remov_EFF_SLICEL_C_PRE)
+                                                     -0.020     1.005    system_i/ps7_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg
+  -------------------------------------------------------------------
+                         required time                         -1.005    
+                         arrival time                           1.179    
+  -------------------------------------------------------------------
+                         slack                                  0.174    
+
+
+
+
+
