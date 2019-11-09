@@ -13,35 +13,35 @@
 
 float read_temp()
 {
-   FILE* fd_iio = fopen("/sys/bus/iio/devices/iio:device0/in_temp0_raw", "r");
-   char iio_str[256];
-   fscanf(fd_iio, "%s", iio_str);
-   fclose(fd_iio);
-   int iio_int = atoi(iio_str);
-   float temp = iio_int*503.975/4096.0 - 273.15;
-   return(temp);
+    FILE* fd_iio = fopen("/sys/bus/iio/devices/iio:device0/in_temp0_raw", "r");
+    char iio_str[256];
+    fscanf(fd_iio, "%s", iio_str);
+    fclose(fd_iio);
+    int iio_int = atoi(iio_str);
+    float temp = iio_int*503.975/4096.0 - 273.15;
+    return(temp);
 }
 
 float read_vccint()
 {
-   FILE* fd_iio = fopen("/sys/bus/iio/devices/iio:device0/in_voltage0_vccint_raw", "r");
-   char iio_str[256];
-   fscanf(fd_iio, "%s", iio_str);
-   fclose(fd_iio);
-   int iio_int = atoi(iio_str);
-   float vccint = iio_int*3.0/4096.0;
-   return(vccint);
+    FILE* fd_iio = fopen("/sys/bus/iio/devices/iio:device0/in_voltage0_vccint_raw", "r");
+    char iio_str[256];
+    fscanf(fd_iio, "%s", iio_str);
+    fclose(fd_iio);
+    int iio_int = atoi(iio_str);
+    float vccint = iio_int*3.0/4096.0;
+    return(vccint);
 }
 
 float read_vccaux()
 {
-   FILE* fd_iio = fopen("/sys/bus/iio/devices/iio:device0/in_voltage1_vccaux_raw", "r");
-   char iio_str[256];
-   fscanf(fd_iio, "%s", iio_str);
-   fclose(fd_iio);
-   int iio_int = atoi(iio_str);
-   float vccaux = iio_int*3.0/4096.0;
-   return(vccaux);
+    FILE* fd_iio = fopen("/sys/bus/iio/devices/iio:device0/in_voltage1_vccaux_raw", "r");
+    char iio_str[256];
+    fscanf(fd_iio, "%s", iio_str);
+    fclose(fd_iio);
+    int iio_int = atoi(iio_str);
+    float vccaux = iio_int*3.0/4096.0;
+    return(vccaux);
 }
 
 int main(int argc,char** argv)
@@ -56,7 +56,7 @@ int main(int argc,char** argv)
        fprintf(stderr,"can't mmap phy_addr 0x%08x with size 0x%08x to viraddr. you must be in root.\n",pcie_bar0_addr,pcie_bar0_size);
        exit(-1);
     }
-   fprintf(stdout,"phy_addr 0x%08x with size 0x%08x to viraddr 0x%08x.\n",pcie_bar0_addr,pcie_bar0_size, (uint32_t)pcie_addr);
+    fprintf(stdout,"phy_addr 0x%08x with size 0x%08x to viraddr 0x%08x.\n",pcie_bar0_addr,pcie_bar0_size, (uint32_t)pcie_addr);
 
     uint32_t chan_enable = 0x00000001;
     printf("chan_enable = 0x%08X\n", chan_enable);
@@ -71,14 +71,14 @@ int main(int argc,char** argv)
 
     munmap(pcie_addr,pcie_bar0_size);
 
-   float temp = read_temp();
-   printf("temp = %f C;\n", temp);
+    float temp = read_temp();
+    printf("temp = %f C;\n", temp);
 
-   float vccint = read_vccint();
-   printf("vccint = %f Volts;\n", vccint);
+    float vccint = read_vccint();
+    printf("vccint = %f Volts;\n", vccint);
 
-   float vccaux = read_vccaux();
-   printf("vccaux = %f Volts;\n", vccaux);
+    float vccaux = read_vccaux();
+    printf("vccaux = %f Volts;\n", vccaux);
 
     return 0;
 }
