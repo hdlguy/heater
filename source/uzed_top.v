@@ -18,12 +18,11 @@ module top (
     end  endgenerate 
     
     // the Zynq is here just to provide axiclk.
-    system system_i(
-        .reset              (reset),
-        .axiclk             (axiclk),        
-        .GPIO0_out_tri_o    (heater_enable),
-        .GPIO1_in_tri_i     (heater_error),
-        .GPIO1_out_tri_o    (heater_err_clear)
+    uzed_system system_i(
+        .axi_aclk            (axiclk),        
+        .GPIO_0_out_tri_o    (heater_enable),
+        .GPIO2_0_in_tri_i    (heater_error),
+        .GPIO_1_out_tri_o    (heater_err_clear)
     );
 
     //vio_0 vio_inst (.clk(clk), .probe_in0(error), .probe_out0(err_clear) );

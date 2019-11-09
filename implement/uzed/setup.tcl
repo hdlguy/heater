@@ -22,8 +22,8 @@ upgrade_ip -quiet  [get_ips *]
 generate_target {all} [get_ips *]
 
 source ../../source/uzed_system.tcl
-generate_target {synthesis implementation} [get_files ./proj.srcs/sources_1/bd/system/system.bd]
-set_property synth_checkpoint_mode None [get_files ./proj.srcs/sources_1/bd/system/system.bd]
+generate_target {synthesis implementation} [get_files ./proj.srcs/sources_1/bd/uzed_system/uzed_system.bd]
+set_property synth_checkpoint_mode None [get_files ./proj.srcs/sources_1/bd/uzed_system/uzed_system.bd]
 
 read_verilog -sv [glob ../../source/lfsr.v]
 read_verilog -sv [glob ../../source/lfsr_generator.v]
