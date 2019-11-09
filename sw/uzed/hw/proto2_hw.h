@@ -5,6 +5,6 @@
 #define     PROTO_SIZE      0x00100000
 
 #define     GPIO0_DATA      0x00000000  // heater enables
-#define     GPIO1_DATA      0x00010000  // error clears
-#define     GPIO1_DATA2     0x00010008  // error indications
+#define     GPIO1_DATA      0x00001000  // error clears
+#define     GPIO1_DATA2     0x00001008  // error indications
 
