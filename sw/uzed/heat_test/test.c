@@ -56,7 +56,7 @@ int main(int argc,char** argv)
        fprintf(stderr,"can't mmap phy_addr 0x%08x with size 0x%08x to viraddr. you must be in root.\n",pcie_bar0_addr,pcie_bar0_size);
        exit(-1);
     }
-    fprintf(stdout,"phy_addr 0x%08x with size 0x%08x to viraddr 0x%08x.\n",pcie_bar0_addr,pcie_bar0_size, (uint32_t)pcie_addr);
+    fprintf(stdout,"phy_addr 0x%08x with size 0x%08x to viraddr %p.\n",pcie_bar0_addr,pcie_bar0_size, pcie_addr);
 
     uint32_t chan_enable = 0x00000001;
     printf("chan_enable = 0x%08X\n", chan_enable);
