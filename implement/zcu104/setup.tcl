@@ -30,7 +30,7 @@ read_verilog -sv [glob ../../source/lfsr.v]
 read_verilog -sv [glob ../../source/lfsr_generator.v]
 read_verilog -sv [glob ../../source/lfsr_checker.v]
 read_verilog -sv [glob ../../source/heater.v]
-read_verilog -sv [glob ../../source/uzed_top.v]
+read_verilog -sv [glob ../../source/zcu104_top.v]
 
 #read_xdc ../../source/top.xdc
 
