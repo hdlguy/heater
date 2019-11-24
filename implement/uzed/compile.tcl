@@ -27,7 +27,7 @@ report_utilization    -file ./results/post_route_utilization.rpt
 
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [get_designs impl_1]
 #write_bitstream -bin_file -force ./results/top.bit
-write_bitstream -force ./results/top.bit -mask_file ./results/top.msk
+write_bitstream -force ./results/top.bit -mask_file
 
 close_project
 
