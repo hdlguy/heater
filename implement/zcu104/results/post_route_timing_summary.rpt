@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date              : Sun Nov 24 10:42:18 2019
-| Host              : pedro-mini-itx running 64-bit Ubuntu 18.04.3 LTS
+| Date              : Wed Nov 27 18:08:25 2019
+| Host              : pedro-MS-7B50 running 64-bit Ubuntu 18.04.3 LTS
 | Command           : report_timing_summary -file ./results/post_route_timing_summary.rpt
 | Design            : top
 | Device            : xczu7ev-ffvc1156
