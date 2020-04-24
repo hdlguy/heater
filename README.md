@@ -21,3 +21,4 @@ Build instructions are in the implement folder.
 This design was tested on a MicroZed 7020 board and an Avnet Artix 50t board.  I was able to achieve very high temperatures on the MicroZed. The MicroZed is my most useful board so I did not want to damage it. That's why I switched to the Artix board. Eventually, a die temperature greater than 100C was achieved and the current limit of the Artix board point of load regulator was exceeded causing the board to reboot.
 
 Use with caution. :smiling_imp:
+
