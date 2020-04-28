@@ -1,7 +1,8 @@
 # This file sets up the simulation environment.
 #create_project -part xc7vx690tffg1761-2 -force proj 
 create_project -force proj 
-set_property board_part em.avnet.com:microzed_7020:part0:1.1 [current_project]
+#set_property board_part em.avnet.com:microzed_7020:part0:1.1 [current_project]
+set_property part xc7a35ticsg324-1L [current_project]
 set_property target_language Verilog [current_project]
 set_property "default_lib" "work" [current_project]
 create_fileset -simset simset

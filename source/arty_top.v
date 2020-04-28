@@ -9,19 +9,22 @@ module artix_top (
 
     localparam N = 12; // number of heaters
 
-    logic clk300, clk100;
-    artix_clock_wiz clock_wiz_inst(.clk100(clk100), .clk300(clk300), .locked(), .clk_in1(clk_in));
+    logic clk400, clk100;
+    arty_clock_wiz clock_wiz_inst(.clk100(clk100), .clk400(clk400), .locked(), .clk_in1(clk_in));
 
     logic [N-1:0] heater_error, heater_err_clear, heater_enable;
 
     genvar i;  
     generate  for (i=0; i<N; i++) begin: gen_code_label  
-        heater #(.Nsrl(6), .Nbram(4), .Ndsp(6), .Npipe(64)) heater_inst(.clk(clk300), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
+        heater #(.Nsrl(6), .Nbram(4), .Ndsp(6), .Npipe(64)) heater_inst(.clk(clk400), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
     end  endgenerate 
+    
+    logic[N-1:0] heater_error_q;
+    always_ff @(posedge clk100) heater_error_q <= heater_error;  // pipeline
 
-    artix_vio vio_inst( .clk(clk100), .probe_in0(heater_error), .probe_out0(heater_err_clear), .probe_out1(heater_enable) );
+    artix_vio vio_inst( .clk(clk100), .probe_in0(heater_error_q), .probe_out0(heater_err_clear), .probe_out1(heater_enable) );
 
-    always_ff @(posedge clk300) led <= heater_error[7:0];
+    always_ff @(posedge clk400) led <= heater_error[7:0];
     
 endmodule
 

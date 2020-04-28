@@ -17,11 +17,15 @@ module heater #(
     input   logic               clk,
     input   logic               enable,
     input   logic               err_clear,
-    output  logic               error);
+    output  logic               error
+);
+    
+    logic reset;
+    always_ff @(posedge clk) reset <= ~enable;
     
     // an lfsr data source
     logic [31:0] lfsr_dout;    
-    lfsr_generator lfsr_gen_inst(.clk(clk), .reset(1'b0), .dv_in(1), .dv_out(), .dataout(lfsr_dout));
+    lfsr_generator lfsr_gen_inst(.clk(clk), .reset(reset), .dv_in(1'b1), .dv_out(), .dataout(lfsr_dout));
 
     // some srl delays
     //localparam Nsrl = 6;
@@ -35,7 +39,7 @@ module heater #(
     // some BRAM delays
     //localparam Nbram = 4;
     logic [Nbram-1:0][31:0] bram_dout;
-    (* dont_touch="true" *)logic [Nbram-1:0][9:0] count;
+    (* dont_touch="true" *)logic [Nbram-1:0][9:0] count = 0;
     generate for (i=0;i<Nbram;i++) begin: gen_count
         always_ff @(posedge clk) count[i]++;
     end endgenerate
