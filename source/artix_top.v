@@ -5,7 +5,8 @@
 // the fpga to reconfigure.
 module artix_top (
     input  logic       clk_in,
-    output logic [7:0] led);
+    output logic [7:0] led
+);
 
     localparam N = 16;
 
