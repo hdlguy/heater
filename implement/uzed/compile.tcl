@@ -27,14 +27,13 @@ report_utilization    -file ./results/post_route_utilization.rpt
 
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [get_designs impl_1]
 #write_bitstream -bin_file -force ./results/top.bit
-write_bitstream -force ./results/top.bit -mask_file
+#write_bitstream -force ./results/top.bit -mask_file
+write_bitstream -bin_file -force ./results/top.bit
 
 close_project
 
 #exec bootgen -image bitstream.bif -arch zynq -o ./results/top.bit.bin -w
 #exec bootgen -image bitstream.bif -arch zynqmp -process_bitstream bin -o ./results/top.bit.bin -w
-exec bootgen -image bitstream.bif -arch zynqmp                        -o ./results/top.bit.bin -w
-
-
+exec bootgen -image bitstream.bif -arch zynqmp -o ./results/top.bit.bin -w
 
 
