@@ -49,7 +49,7 @@ void* phy_addr_2_vir_addr(off_t phy_addr,size_t size)
       else
       {
           //DEBUG("phy_addr 0x%lX mapped to 0x%lX with size=0x%x bytes\n",phy_addr,(uint64_t)vir_addr,(uint32_t)size);
-          DEBUG("phy_addr 0x%X mapped to 0x%X with size=0x%x bytes\n",(uint32_t)phy_addr,(uint32_t)vir_addr,(uint32_t)size);
+          DEBUG("phy_addr 0x%16lx mapped to 0x%p with size=0x%16lx bytes\n",phy_addr,vir_addr,size);
       }
    }
    return vir_addr;
