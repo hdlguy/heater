@@ -47,33 +47,8 @@ float read_vccaux()
     return(vccaux);
 }
 
-
-
 int main(int argc,char** argv)
 {
-    void* pcie_addr;
-
-    uint32_t pcie_bar0_addr=BASE_ADDRESS;
-    uint32_t pcie_bar0_size=PROTO_SIZE;
-
-    pcie_addr=phy_addr_2_vir_addr(pcie_bar0_addr,pcie_bar0_size);
-    if(pcie_addr==NULL) {
-       fprintf(stderr,"can't mmap phy_addr 0x%08x with size 0x%08x to viraddr. you must be in root.\n",pcie_bar0_addr,pcie_bar0_size);
-       exit(-1);
-    }
-    fprintf(stdout,"phy_addr 0x%08x with size 0x%08x to viraddr %p.\n",pcie_bar0_addr,pcie_bar0_size, pcie_addr);
-    uint32_t chan_enable = 0x000000ff;
-    printf("chan_enable = 0x%08X\n", chan_enable);
-    write_reg(pcie_addr,GPIO0_DATA, chan_enable); // enable the channels
-    usleep(100);
-
-    write_reg(pcie_addr,GPIO1_DATA, 0xffffffff); // clear the errors
-    write_reg(pcie_addr,GPIO1_DATA, 0x00000000); // clear the errors
-    uint32_t read_val;
-    read_val = read_reg(pcie_addr,GPIO1_DATA2);
-    printf("errors = 0x%08X\n", read_val);
-
-    munmap(pcie_addr,pcie_bar0_size);
 
     float temp = read_temp();
     printf("temp = %f C;\n", temp);
