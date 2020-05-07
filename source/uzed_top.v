@@ -3,7 +3,7 @@ module top (
     input   logic       reset
 );
 
-    localparam N = 32;
+    localparam N = 16;
 
     logic axiclk, clk;
     clk_wiz_uzed clk_wiz_inst (.clk_out(clk), .clk_in100(axiclk)); 
