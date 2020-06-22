@@ -3,7 +3,11 @@ module top (
     input   logic       reset
 );
 
-    localparam N = 32;
+    localparam N        = 32;
+    localparam Nsrl     = 40;
+    localparam Nbram    = 9;
+    localparam Ndsp     = 40;
+    localparam Npipe    = 220;
 
     logic axiclk, clk;
     clk_wiz_uzed clk_wiz_inst (.clk_out(clk), .clk_in100(axiclk)); 
@@ -12,7 +16,7 @@ module top (
 
     genvar i;  
     generate  for (i=0; i < N; i++) begin: gen_code_label  
-        heater #(.Nsrl(40), .Nbram(9), .Ndsp(40), .Npipe(220)) heater_inst(.clk(clk), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
+        heater #(.Nsrl(Nsrl), .Nbram(Nbram), .Ndsp(Ndsp), .Npipe(Npipe)) heater_inst(.clk(clk), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
     end  endgenerate 
     
     // the Zynq is here just to provide axiclk.

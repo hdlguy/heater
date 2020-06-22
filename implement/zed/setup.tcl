@@ -2,9 +2,9 @@
 close_project -quiet
 file delete -force proj.xpr *.os *.jou *.log proj.srcs proj.cache proj.runs
 #
-create_project -force proj 
+create_project -part xc7z020clg400-1 -force proj 
 #set_property board_part em.avnet.com:microzed_7020:part0:1.2 [current_project]
-set_property board_part em.avnet.com:microzed_7020:part0:1.1 [current_project]
+#set_property board_part em.avnet.com:microzed_7020:part0:1.1 [current_project]
 set_property target_language verilog [current_project]
 set_property default_lib work [current_project]
 load_features ipintegrator

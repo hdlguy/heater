@@ -24,7 +24,11 @@ module top (
     inout logic  FIXED_IO_ps_porb,
     inout logic  FIXED_IO_ps_srstb);
 
-    localparam N = 32;
+    localparam N        = 32;
+    localparam Nsrl     = 6;
+    localparam Nbram    = 4;
+    localparam Ndsp     = 6;
+    localparam Npipe    = 48;
 
     logic axiclk;
     clk_wiz_0 instance_name (.clk_out200(clk), .clk_in100(axiclk)); 
@@ -33,7 +37,7 @@ module top (
 
     genvar i;  
     generate  for (i=0; i < N; i++) begin: gen_code_label  
-        heater #(.Nsrl(6), .Nbram(4), .Ndsp(6), .Npipe(48)) heater_inst(.clk(clk), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
+        heater #(.Nsrl(Nsrl), .Nbram(Nbram), .Ndsp(Ndsp), .Npipe(Npipe)) heater_inst(.clk(clk), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
     end  endgenerate 
     
     // the Zynq is here just to provide axiclk.
@@ -64,8 +68,6 @@ module top (
         .GPIO1_in_tri_i(heater_error),
         .GPIO1_out_tri_o(heater_err_clear)
     );
-
-    //vio_0 vio_inst (.clk(clk), .probe_in0(error), .probe_out0(err_clear) );
 
 endmodule
 

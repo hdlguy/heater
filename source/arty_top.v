@@ -7,7 +7,11 @@ module artix_top (
     input  logic       clk_in,
     output logic [7:0] led);
 
-    localparam N = 12; // number of heaters
+    localparam N     = 12; // number of heaters
+    localparam Nsrl  = 6;
+    localparam Nbram = 4;
+    localparam Ndsp  = 6;
+    localparam Npipe = 64;
 
     logic clk400, clk100;
     arty_clock_wiz clock_wiz_inst(.clk100(clk100), .clk400(clk400), .locked(), .clk_in1(clk_in));
@@ -16,7 +20,7 @@ module artix_top (
 
     genvar i;  
     generate  for (i=0; i<N; i++) begin: gen_code_label  
-        heater #(.Nsrl(6), .Nbram(4), .Ndsp(6), .Npipe(64)) heater_inst(.clk(clk400), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
+        heater #(.Nsrl(Nsrl), .Nbram(Nbram), .Ndsp(Ndsp), .Npipe(Npipe)) heater_inst(.clk(clk400), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
     end  endgenerate 
     
     logic[N-1:0] heater_error_q;
