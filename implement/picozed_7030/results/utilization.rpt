@@ -1,9 +1,9 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Fri Jan  1 09:56:42 2021
-| Host         : pedro-nvme running 64-bit Ubuntu 18.04.5 LTS
-| Command      : report_utilization -file ./results/post_route_utilization.rpt
+| Date         : Mon Feb  1 09:18:09 2021
+| Host         : WD-SN850 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : report_utilization -file ./results/utilization.rpt
 | Design       : top
 | Device       : 7z030sbg485-1
 | Design State : Routed

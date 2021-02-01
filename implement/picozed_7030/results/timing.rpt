@@ -1,13 +1,13 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Fri Jan  1 09:56:41 2021
-| Host         : pedro-nvme running 64-bit Ubuntu 18.04.5 LTS
-| Command      : report_timing_summary -file ./results/post_route_timing_summary.rpt
+| Date         : Mon Feb  1 09:18:08 2021
+| Host         : WD-SN850 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : report_timing_summary -file ./results/timing.rpt
 | Design       : top
 | Device       : 7z030-sbg485
 | Speed File   : -1  PRODUCTION 1.12 2019-11-22
--------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 Timing Summary Report
 
