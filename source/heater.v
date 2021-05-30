@@ -1,7 +1,7 @@
 // This is a block of logic that is designed to to just burn power.  It uses 
 // DSP48, SRL, BRAM and CLB logic in a balanced way.  Pipelining has been
 // used so that the clock speed can run close to the peak operating frequency of the FPGA.
-// Local parameters have been provided so that the mix of logic can be tuned for a particular part.
+// Parameters have been provided so that the mix of logic can be tuned for a particular part.
 // Multiple channels can be instantiated and then enabled individually in order to scale power consumption.
 // An LFSR is used as the data source so the toggle rate is exactly 50%. Knowing
 // the toggle rate allows Xpower to predict current draw very accurately.
