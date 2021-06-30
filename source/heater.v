@@ -69,9 +69,12 @@ module heater #(
     end  endgenerate 
     
     // an lsfr data checker
-    logic err_clear_q;
-    always_ff @(posedge clk) err_clear_q <= err_clear;
-    lfsr_checker lfsr_check_inst(.clk(clk), .reset(err_clear_q), .datain(ff_dout[Npipe-1]), .error(error));
+    logic err_clear_q,err_clear_qq;
+    always_ff @(posedge clk) begin 
+        err_clear_q <= err_clear; 
+        err_clear_qq <= err_clear_q; 
+    end
+    lfsr_checker lfsr_check_inst(.clk(clk), .reset(err_clear_qq), .datain(ff_dout[Npipe-1]), .error(error));
 
 endmodule
 
