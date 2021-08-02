@@ -11,7 +11,7 @@ module lutburn_tb ();
     initial begin
         din = 0;
         #(clk_period*1);
-        forever
+        forever begin
             din++;
             #(clk_period*1);
         end
