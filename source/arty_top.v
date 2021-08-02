@@ -11,7 +11,7 @@ module artix_top (
     localparam Nsrl  = 6;
     localparam Nbram = 4;
     localparam Ndsp  = 6;
-    localparam Npipe = 64;
+    localparam Npipe = 32;
 
     logic clk400, clk100;
     arty_clock_wiz clock_wiz_inst(.clk100(clk100), .clk400(clk400), .locked(), .clk_in1(clk_in));

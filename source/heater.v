@@ -60,13 +60,15 @@ module heater #(
 
     // some pipeline registers
     //localparam Npipe = 64;
-    logic [Npipe-1:0][31:0] ff_dout;
+    logic [Npipe-1:0][31:0] ff_dout, lut_dout;
     always_ff @(posedge clk) ff_dout[0] <= dsp_dout_q[Ndsp-1][31:0];
     generate  for (i=1; i<Npipe; i++) begin: gen_reg  
         for (j=0; j<32; j++) begin: gen_ff
-            (* dont_touch="true" *) FDRE FDRE_inst(.Q(ff_dout[i][j]), .C(clk), .CE(1), .R(0), .D(ff_dout[i-1][j]));
+            (* dont_touch="true" *) LUT1 #(.INIT(2'b10)) LUT1_inst (.O(lut_dout[i-1][j]), .I0(ff_dout[i-1][j]));
+            (* dont_touch="true" *) FDRE FDRE_inst(.Q(ff_dout[i][j]), .C(clk), .CE(1), .R(0), .D(lut_dout[i-1][j]));
         end  
     end  endgenerate 
+    
     
     // an lsfr data checker
     logic err_clear_q,err_clear_qq;
