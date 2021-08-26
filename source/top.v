@@ -28,7 +28,7 @@ module top (
     localparam Nsrl     = 6;
     localparam Nbram    = 4;
     localparam Ndsp     = 6;
-    localparam Npipe    = 48;
+    localparam Npipe    = 32;
 
     logic axiclk;
     clk_wiz_0 instance_name (.clk_out200(clk), .clk_in100(axiclk)); 
