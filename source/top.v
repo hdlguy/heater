@@ -69,7 +69,7 @@ module top (
         .GPIO1_out_tri_o(heater_err_clear)
     );
     
-    heater_ila heater_ila_inst (.clk(clk), .probe0({heater_enable[0], heater_error[0], heater_err_clear[0]}) ); // 96
+    //heater_ila heater_ila_inst (.clk(clk), .probe0({heater_enable, heater_error, heater_err_clear}) ); // 96
 
 endmodule
 
