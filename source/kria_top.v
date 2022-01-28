@@ -4,11 +4,12 @@ module top (
 );
 
     localparam Nchan = 32;
-    localparam Nsrl  = 20;
+    localparam Nsrl  = 8;
     localparam Nbram = 4;
     localparam Ndsp  = 30;
-    localparam Npipe = 70;
+    localparam Npipe = 32;
 
+    logic clk;
     logic [Nchan-1:0] heater_error, heater_err_clear, heater_enable;
 
     genvar i;  
@@ -16,11 +17,11 @@ module top (
         heater #(.Nsrl(Nsrl), .Nbram(Nbram), .Ndsp(Ndsp), .Npipe(Npipe)) heater_inst (.clk(clk), .enable(heater_enable[i]), .error(heater_error[i]), .err_clear(heater_err_clear[i]));
     end  endgenerate 
     
-    logic [39:0]    M00_AXI_araddr;
+    logic [31:0]    M00_AXI_araddr;
     logic [2:0]     M00_AXI_arprot;
     logic           M00_AXI_arready;
     logic           M00_AXI_arvalid;
-    logic [39:0]    M00_AXI_awaddr;
+    logic [31:0]    M00_AXI_awaddr;
     logic [2:0]     M00_AXI_awprot;
     logic           M00_AXI_awready;
     logic           M00_AXI_awvalid;
@@ -39,7 +40,6 @@ module top (
     logic           axi_aclk;
     logic [0:0]     axi_aresetn;
     
-    logic clk;
     clk_wiz_uzed clk_wiz_inst (.clk_out(clk), .clk_in100(axi_aclk)); 
 
     kria_system system_i (
@@ -95,11 +95,11 @@ module top (
 		.S_AXI_ACLK    (axi_aclk),
 		.S_AXI_ARESETN (axi_aresetn),
         //
-		.S_AXI_ARADDR  (M00_AXI_araddr ),
+		.S_AXI_ARADDR  (M00_AXI_araddr[Nregaddr-1:0]),
 		.S_AXI_ARPROT  (M00_AXI_arprot ),
 		.S_AXI_ARREADY (M00_AXI_arready),
 		.S_AXI_ARVALID (M00_AXI_arvalid),
-		.S_AXI_AWADDR  (M00_AXI_awaddr ),
+		.S_AXI_AWADDR  (M00_AXI_awaddr[Nregaddr-1:0]),
 		.S_AXI_AWPROT  (M00_AXI_awprot ),
 		.S_AXI_AWREADY (M00_AXI_awready),
 		.S_AXI_AWVALID (M00_AXI_awvalid),
@@ -115,6 +115,7 @@ module top (
 		.S_AXI_WSTRB   (M00_AXI_wstrb  ),
 		.S_AXI_WVALID  (M00_AXI_wvalid )
 	);
+	
 
 endmodule
     
