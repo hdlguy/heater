@@ -1,10 +1,11 @@
-/// This is the base address of the AXI I/O 
-#define     BASE_ADDRESS    0x80000000
-
-/// This is the size of the memory hole we need to talk to the FPGA.
+#define     BASE_ADDRESS    0xA0000000
 #define     PROTO_SIZE      0x00100000
 
-#define     GPIO0_DATA      0x00000000  // heater enables
-#define     GPIO1_DATA      0x00001000  // error clears
-#define     GPIO1_DATA2     0x00001008  // error indications
+#define     AXI_REG_OFFSET  0x00000000
 
+// these are indexes into the register file. access with something like regptr[FPGA_ID]
+#define     FPGA_ID             0  // Currently returns 0xDEADBEEF
+#define     FPGA_VERSION        1  // Returns major and minor version numbers.
+#define     HEATER_ERROR        2  
+#define     HEATER_ENABLE       3  
+#define     HEATER_CLEAR        4  

@@ -4,7 +4,7 @@ all: $(ALL_EXE)
 CC=gcc
 CFLAGS=-I. -I../include  -I../API -I../hw -Wall
 
-DEPS = Makefile ../hw/proto2_hw.h ../hw/xspi_l.h
+DEPS = Makefile ../hw/proto2_hw.h
 
 PUBLIC_LIBS = ../API/utils.o ../API/mem-io.o
 LIB_FILES =

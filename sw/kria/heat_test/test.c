@@ -61,17 +61,22 @@ int main(int argc,char** argv)
        fprintf(stderr,"can't mmap phy_addr 0x%08x with size 0x%08x to viraddr. you must be in root.\n",pcie_bar0_addr,pcie_bar0_size);
        exit(-1);
     }
-    fprintf(stdout,"phy_addr 0x%08x with size 0x%08x to viraddr %p.\n",pcie_bar0_addr,pcie_bar0_size, pcie_addr);
-    uint32_t chan_enable = 0x00000000;
+
+    uint32_t *regptr = (uint32_t *) pcie_addr + AXI_REG_OFFSET;
+
+    printf("FPGA_ID = 0x%08x, FPGA_VERSION = 0x%08x\n", regptr[FPGA_ID], regptr[FPGA_VERSION]);
+
+    uint32_t chan_enable = 0xffffffff;
     printf("chan_enable = 0x%08X\n", chan_enable);
-    write_reg(pcie_addr,GPIO0_DATA, chan_enable); // enable the channels
+    regptr[HEATER_ENABLE] = chan_enable;
     usleep(100);
 
-    write_reg(pcie_addr,GPIO1_DATA, 0xffffffff); // clear the errors
-    write_reg(pcie_addr,GPIO1_DATA, 0x00000000); // clear the errors
+    regptr[HEATER_CLEAR] = 0xffffffff;
+    regptr[HEATER_CLEAR] = 0x00000000;
     uint32_t read_val;
-    read_val = read_reg(pcie_addr,GPIO1_DATA2);
+    read_val = regptr[HEATER_ERROR];
     printf("errors = 0x%08X\n", read_val);
+
 
     munmap(pcie_addr,pcie_bar0_size);
 
