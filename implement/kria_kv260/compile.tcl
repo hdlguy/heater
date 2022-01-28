@@ -20,8 +20,8 @@ wait_on_run impl_1
 
 open_run impl_1
 write_checkpoint     -force ./results/post_route.dcp
-write_debug_probes   -force ./results/probes.ltx
-write_hwdef -force  -file   ./results/top.hdf
+write_debug_probes   -force ./results/top.ltx
+write_hw_platform -fixed -force -file   ./results/top.xsa
 report_timing_summary -file ./results/timing.rpt
 report_utilization    -file ./results/utilization.rpt
 

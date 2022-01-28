@@ -3,10 +3,7 @@ close_project -quiet
 file delete -force proj.xpr *.os *.jou *.log proj.srcs proj.cache proj.runs
 #
 create_project -part xck26-sfvc784-2lv-c -force proj 
-set_property board_part xilinx.com:kv260:part0:1.1 [current_project]
-#set_property board_part em.avnet.com:microzed_7020:part0:1.2 [current_project]
-#set_property board_part em.avnet.com:microzed_7020:part0:1.1 [current_project]
-#set_property board_part em.avnet.com:ultrazed_eg_iocc_production:part0:1.0 [current_project]
+set_property board_part xilinx.com:kv260_som:part0:1.2 [current_project]
 set_property target_language verilog [current_project]
 set_property default_lib work [current_project]
 load_features ipintegrator
@@ -26,11 +23,12 @@ source ../../source/kria_system.tcl
 generate_target {synthesis implementation} [get_files ./proj.srcs/sources_1/bd/kria_system/kria_system.bd]
 set_property synth_checkpoint_mode None [get_files ./proj.srcs/sources_1/bd/kria_system/kria_system.bd]
 
-read_verilog -sv [glob ../../source/lfsr.v]
-read_verilog -sv [glob ../../source/lfsr_generator.v]
-read_verilog -sv [glob ../../source/lfsr_checker.v]
-read_verilog -sv [glob ../../source/heater.v]
-read_verilog -sv [glob ../../source/kria_top.v]
+read_verilog -sv ../../source/axi_regfile/axi_regfile_v1_0_S00_AXI.sv
+read_verilog -sv ../../source/lfsr.v
+read_verilog -sv ../../source/lfsr_generator.v
+read_verilog -sv ../../source/lfsr_checker.v
+read_verilog -sv ../../source/heater.v
+read_verilog -sv ../../source/kria_top.v
 
 #read_xdc ../../source/top.xdc
 
