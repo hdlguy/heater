@@ -2,8 +2,8 @@
 close_project -quiet
 file delete -force proj.xpr *.os *.jou *.log proj.srcs proj.cache proj.runs
 #
-create_project -part xck26-sfvc784-2lv-c -force proj 
-set_property board_part xilinx.com:kv260_som:part0:1.2 [current_project]
+#create_project -part xck26-sfvc784-2lv-c -force proj 
+create_project -part xczu2cg-sfvc784-1-i -force proj 
 set_property target_language verilog [current_project]
 set_property default_lib work [current_project]
 load_features ipintegrator
@@ -19,16 +19,16 @@ read_ip ../../source/srl32/srl32.xci
 upgrade_ip -quiet  [get_ips *]
 generate_target {all} [get_ips *]
 
-source ../../source/kria_system.tcl
-generate_target {synthesis implementation} [get_files ./proj.srcs/sources_1/bd/kria_system/kria_system.bd]
-set_property synth_checkpoint_mode None [get_files ./proj.srcs/sources_1/bd/kria_system/kria_system.bd]
+source ../../source/alinx_system.tcl
+generate_target {synthesis implementation} [get_files ./proj.srcs/sources_1/bd/alinx_system/alinx_system.bd]
+set_property synth_checkpoint_mode None [get_files ./proj.srcs/sources_1/bd/alinx_system/alinx_system.bd]
 
 read_verilog -sv ../../source/axi_regfile/axi_regfile_v1_0_S00_AXI.sv
 read_verilog -sv ../../source/lfsr.v
 read_verilog -sv ../../source/lfsr_generator.v
 read_verilog -sv ../../source/lfsr_checker.v
 read_verilog -sv ../../source/heater.v
-read_verilog -sv ../../source/kria_top.v
+read_verilog -sv ../../source/alinx_top.v
 
 #read_xdc ../../source/top.xdc
 
