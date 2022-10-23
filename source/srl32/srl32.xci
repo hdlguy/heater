@@ -42,7 +42,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SYNC_PRIORITY">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_VERBOSITY">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_WIDTH">32</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_XDEVICEFAMILY">zynquplus</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_XDEVICEFAMILY">artix7</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.AsyncInitRadix">2</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.AsyncInitVal">00000000000000000000000000000000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CE">false</spirit:configurableElementValue>
@@ -63,15 +63,15 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SyncInitRadix">2</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SyncInitVal">00000000000000000000000000000000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Width">32</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">zynquplus</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">artix7</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BASE_BOARD_PART"/>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BOARD_CONNECTIONS"/>
-        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.DEVICE">xczu2cg</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.PACKAGE">sfvc784</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.DEVICE">xc7a35ti</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.PACKAGE">csg324</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.PREFHDL">VERILOG</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.SILICON_REVISION"/>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.SIMULATOR_LANGUAGE">MIXED</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.SPEEDGRADE">-1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.SPEEDGRADE">-1L</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.STATIC_POWER"/>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.TEMPERATURE_GRADE">I</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.USE_RDI_CUSTOMIZATION">TRUE</spirit:configurableElementValue>
@@ -82,7 +82,7 @@
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.OUTPUTDIR">.</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SELECTEDSIMMODEL"/>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SHAREDDIR">.</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2021.2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2022.1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SYNTHESISFLOW">OUT_OF_CONTEXT</spirit:configurableElementValue>
       </spirit:configurableElementValues>
       <spirit:vendorExtensions>
@@ -96,12 +96,100 @@
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Width" xilinx:valueSource="user"/>
           </xilinx:configElementInfos>
           <xilinx:boundaryDescriptionInfo>
-            <xilinx:boundaryDescription xilinx:boundaryDescriptionJSON="{&quot;ip_boundary&quot;:{&quot;ports&quot;:{&quot;CLK&quot;:[{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;is_vector&quot;:&quot;false&quot;}],&quot;D&quot;:[{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;is_vector&quot;:&quot;true&quot;}],&quot;Q&quot;:[{&quot;direction&quot;:&quot;out&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;is_vector&quot;:&quot;true&quot;}]},&quot;interfaces&quot;:{&quot;a_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:data:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:data_rtl:1.0&quot;,&quot;mode&quot;:&quot;slave&quot;,&quot;parameters&quot;:{&quot;LAYERED_METADATA&quot;:[{&quot;value&quot;:&quot;undef&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}]},&quot;port_maps&quot;:{&quot;DATA&quot;:[{&quot;physical_name&quot;:&quot;A&quot;,&quot;physical_left&quot;:&quot;3&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;3&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}},&quot;ce_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:clockenable:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:clockenable_rtl:1.0&quot;,&quot;mode&quot;:&quot;slave&quot;,&quot;parameters&quot;:{&quot;POLARITY&quot;:[{&quot;value&quot;:&quot;ACTIVE_HIGH&quot;,&quot;value_src&quot;:&quot;constant&quot;,&quot;value_permission&quot;:&quot;user&quot;
-,&quot;resolve_type&quot;:&quot;immediate&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;all&quot;,&quot;is_ips_inferred&quot;:false,&quot;is_static_object&quot;:true}]},&quot;port_maps&quot;:{&quot;CE&quot;:[{&quot;physical_name&quot;:&quot;CE&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;0&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}},&quot;clk_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:clock:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:clock_rtl:1.0&quot;,&quot;mode&quot;:&quot;slave&quot;,&quot;parameters&quot;:{&quot;ASSOCIATED_BUSIF&quot;:[{&quot;value&quot;:&quot;q_intf:sinit_intf:sset_intf:d_intf:a_intf&quot;,&quot;value_src&quot;:&quot;constant&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;immediate&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;all&quot;,&quot;is_ips_inferred&quot;:false,&quot;is_static_object&quot;:true}],&quot;ASSOCIATED_CLKEN&quot;:[{&quot;value&quot;:&quot;CE&quot;,&quot;value_src&quot;:&quot;constant&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;immediate&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;all&quot;,&quot;is_ips_inferred&quot;:false,&quot;is_static_object&quot;:true}],&quot;ASSOCIATED_PORT&quot;:[{&quot;value&quot;:&quot;&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:fals
-e}],&quot;ASSOCIATED_RESET&quot;:[{&quot;value&quot;:&quot;SCLR&quot;,&quot;value_src&quot;:&quot;constant&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;immediate&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;all&quot;,&quot;is_ips_inferred&quot;:false,&quot;is_static_object&quot;:true}],&quot;CLK_DOMAIN&quot;:[{&quot;value&quot;:&quot;&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}],&quot;FREQ_HZ&quot;:[{&quot;value&quot;:&quot;100000000&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;user&quot;,&quot;format&quot;:&quot;long&quot;,&quot;usage&quot;:&quot;all&quot;,&quot;is_ips_inferred&quot;:false,&quot;is_static_object&quot;:true}],&quot;FREQ_TOLERANCE_HZ&quot;:[{&quot;value&quot;:&quot;0&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;long&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}],&quot;INSERT_VIP&quot;:[{&quot;value&quot;:&quot;0&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;user&quot;,&quot;format&quot;:&quot;long&quot;,&quot;usage&quot;:&quot;simulation.rtl&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}],&quot;PHASE&quot;:[{&quot;value&quot;:&quot;0.0&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_perm
-ission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;float&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}]},&quot;port_maps&quot;:{&quot;CLK&quot;:[{&quot;physical_name&quot;:&quot;CLK&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;0&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}},&quot;d_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:data:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:data_rtl:1.0&quot;,&quot;mode&quot;:&quot;slave&quot;,&quot;parameters&quot;:{&quot;LAYERED_METADATA&quot;:[{&quot;value&quot;:&quot;undef&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}]},&quot;port_maps&quot;:{&quot;DATA&quot;:[{&quot;physical_name&quot;:&quot;D&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;31&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}},&quot;q_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:data:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:data_rtl:1.0&quot;,&quot;mode&quot;:&quot;master&quot;,&quot;parameters&quot;:{&quot;LAYERED_METADATA&quot;:[{&quot;value&quot;:&quot;undef&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;
-:&quot;string&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}]},&quot;port_maps&quot;:{&quot;DATA&quot;:[{&quot;physical_name&quot;:&quot;Q&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;31&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}},&quot;sclr_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:reset:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:reset_rtl:1.0&quot;,&quot;mode&quot;:&quot;slave&quot;,&quot;parameters&quot;:{&quot;INSERT_VIP&quot;:[{&quot;value&quot;:&quot;0&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;user&quot;,&quot;format&quot;:&quot;long&quot;,&quot;usage&quot;:&quot;simulation.rtl&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}],&quot;POLARITY&quot;:[{&quot;value&quot;:&quot;ACTIVE_HIGH&quot;,&quot;value_src&quot;:&quot;constant&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;immediate&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;all&quot;,&quot;is_ips_inferred&quot;:false,&quot;is_static_object&quot;:true}]},&quot;port_maps&quot;:{&quot;RST&quot;:[{&quot;physical_name&quot;:&quot;SCLR&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;0&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}},&quot;sinit_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:data:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:data_rtl:1.0&quot;,&quot;mo
-de&quot;:&quot;slave&quot;,&quot;parameters&quot;:{&quot;LAYERED_METADATA&quot;:[{&quot;value&quot;:&quot;undef&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}]},&quot;port_maps&quot;:{&quot;DATA&quot;:[{&quot;physical_name&quot;:&quot;SINIT&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;0&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}},&quot;sset_intf&quot;:{&quot;vlnv&quot;:&quot;xilinx.com:signal:data:1.0&quot;,&quot;abstraction_type&quot;:&quot;xilinx.com:signal:data_rtl:1.0&quot;,&quot;mode&quot;:&quot;slave&quot;,&quot;parameters&quot;:{&quot;LAYERED_METADATA&quot;:[{&quot;value&quot;:&quot;undef&quot;,&quot;value_src&quot;:&quot;default&quot;,&quot;value_permission&quot;:&quot;user&quot;,&quot;resolve_type&quot;:&quot;generated&quot;,&quot;format&quot;:&quot;string&quot;,&quot;usage&quot;:&quot;none&quot;,&quot;is_ips_inferred&quot;:true,&quot;is_static_object&quot;:false}]},&quot;port_maps&quot;:{&quot;DATA&quot;:[{&quot;physical_name&quot;:&quot;SSET&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;,&quot;logical_left&quot;:&quot;0&quot;,&quot;logical_right&quot;:&quot;0&quot;,&quot;port_maps_used&quot;:&quot;none&quot;}]}}}}}"/>
+            <xilinx:boundaryDescription xilinx:boundaryDescriptionJSON="{
+              &quot;schema&quot;: &quot;xilinx.com:schema:json_boundary:1.0&quot;,
+              &quot;boundary&quot;: {
+                &quot;ports&quot;: {
+                  &quot;D&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
+                  &quot;CLK&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0x0&quot; } ],
+                  &quot;Q&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ]
+                },
+                &quot;interfaces&quot;: {
+                  &quot;a_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:data:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:data_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;LAYERED_METADATA&quot;: [ { &quot;value&quot;: &quot;undef&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ]
+                    }
+                  },
+                  &quot;clk_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:clock:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:clock_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;ASSOCIATED_BUSIF&quot;: [ { &quot;value&quot;: &quot;q_intf:sinit_intf:sset_intf:d_intf:a_intf&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;ASSOCIATED_RESET&quot;: [ { &quot;value&quot;: &quot;SCLR&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;ASSOCIATED_CLKEN&quot;: [ { &quot;value&quot;: &quot;CE&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;FREQ_HZ&quot;: [ { &quot;value&quot;: &quot;100000000&quot;, &quot;resolve_type&quot;: &quot;user&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;FREQ_TOLERANCE_HZ&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ],
+                      &quot;PHASE&quot;: [ { &quot;value&quot;: &quot;0.0&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;float&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ],
+                      &quot;CLK_DOMAIN&quot;: [ { &quot;value&quot;: &quot;&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ],
+                      &quot;ASSOCIATED_PORT&quot;: [ { &quot;value&quot;: &quot;&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ],
+                      &quot;INSERT_VIP&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;resolve_type&quot;: &quot;user&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.rtl&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;CLK&quot;: [ { &quot;physical_name&quot;: &quot;CLK&quot; } ]
+                    }
+                  },
+                  &quot;sclr_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:reset:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:reset_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;POLARITY&quot;: [ { &quot;value&quot;: &quot;ACTIVE_HIGH&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;INSERT_VIP&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;resolve_type&quot;: &quot;user&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.rtl&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ]
+                    }
+                  },
+                  &quot;ce_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:clockenable:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:clockenable_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;POLARITY&quot;: [ { &quot;value&quot;: &quot;ACTIVE_HIGH&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;usage&quot;: &quot;all&quot; } ]
+                    }
+                  },
+                  &quot;d_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:data:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:data_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;LAYERED_METADATA&quot;: [ { &quot;value&quot;: &quot;undef&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;DATA&quot;: [ { &quot;physical_name&quot;: &quot;D&quot; } ]
+                    }
+                  },
+                  &quot;sset_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:data:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:data_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;LAYERED_METADATA&quot;: [ { &quot;value&quot;: &quot;undef&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ]
+                    }
+                  },
+                  &quot;sinit_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:data:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:data_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;LAYERED_METADATA&quot;: [ { &quot;value&quot;: &quot;undef&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ]
+                    }
+                  },
+                  &quot;q_intf&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:data:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:data_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;master&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;LAYERED_METADATA&quot;: [ { &quot;value&quot;: &quot;undef&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_ips_inferred&quot;: true, &quot;is_static_object&quot;: false } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;DATA&quot;: [ { &quot;physical_name&quot;: &quot;Q&quot; } ]
+                    }
+                  }
+                }
+              }
+            }"/>
           </xilinx:boundaryDescriptionInfo>
         </xilinx:componentInstanceExtensions>
       </spirit:vendorExtensions>
