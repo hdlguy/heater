@@ -1,4 +1,3 @@
-# constraints for the Avnet Artix 50t board
 set_property PACKAGE_PIN E3 [get_ports clk_in]
 set_property IOSTANDARD LVCMOS33 [get_ports clk_in]
 create_clock -period 10.0 [get_ports clk_in]
