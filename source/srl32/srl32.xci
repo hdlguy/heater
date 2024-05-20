@@ -29,7 +29,7 @@
         "CEPriority": [ { "value": "Sync_Overrides_CE", "resolve_type": "user", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
-        "C_XDEVICEFAMILY": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
+        "C_XDEVICEFAMILY": [ { "value": "artixuplus", "resolve_type": "generated", "usage": "all" } ],
         "C_VERBOSITY": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_DEPTH": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -53,15 +53,15 @@
         "C_PARSER_TYPE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "ARCHITECTURE": [ { "value": "kintexuplus" } ],
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xc7a100ti" } ],
-        "PACKAGE": [ { "value": "csg324" } ],
+        "DEVICE": [ { "value": "xcau15p" } ],
+        "PACKAGE": [ { "value": "ffvb676" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
-        "SPEEDGRADE": [ { "value": "-1L" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
         "STATIC_POWER": [ { "value": "" } ],
         "TEMPERATURE_GRADE": [ { "value": "I" } ],
         "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
