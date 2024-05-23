@@ -6,7 +6,7 @@ module axau15_top (
     localparam int N = 32;
     localparam int Nsrl = 6;
     localparam int Nbram = 4;
-    localparam int Ndsp = 6;
+    localparam int Ndsp = 12;
     localparam int Npipe = 60; 
 
     logic clk300, clk100;
