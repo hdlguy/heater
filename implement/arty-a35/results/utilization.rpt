@@ -1,14 +1,14 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Nov  3 04:14:54 2022
-| Host         : pdudley-msi-laptop running 64-bit Ubuntu 20.04.5 LTS
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Fri Jun  7 08:21:03 2024
+| Host         : WD850X2TB running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file ./results/utilization.rpt
 | Design       : artix_top
 | Device       : xc7a35ticsg324-1L
 | Speed File   : -1L
 | Design State : Routed
-------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -71,9 +71,9 @@ Table of Contents
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 |                  Site Type                 |  Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
-| Slice                                      |  5610 |     0 |          0 |      8150 | 68.83 |
-|   SLICEL                                   |  3765 |     0 |            |           |       |
-|   SLICEM                                   |  1845 |     0 |            |           |       |
+| Slice                                      |  5638 |     0 |          0 |      8150 | 69.18 |
+|   SLICEL                                   |  3805 |     0 |            |           |       |
+|   SLICEM                                   |  1833 |     0 |            |           |       |
 | LUT as Logic                               | 13216 |     0 |          0 |     20800 | 63.54 |
 |   using O5 output only                     |     0 |       |            |           |       |
 |   using O6 output only                     | 13053 |       |            |           |       |
@@ -88,10 +88,10 @@ Table of Contents
 |     using O6 output only                   |  4608 |       |            |           |       |
 |     using O5 and O6                        |     0 |       |            |           |       |
 | Slice Registers                            | 24683 |     0 |          0 |     41600 | 59.33 |
-|   Register driven from within the Slice    | 15932 |       |            |           |       |
-|   Register driven from outside the Slice   |  8751 |       |            |           |       |
-|     LUT in front of the register is unused |  4482 |       |            |           |       |
-|     LUT in front of the register is used   |  4269 |       |            |           |       |
+|   Register driven from within the Slice    | 15918 |       |            |           |       |
+|   Register driven from outside the Slice   |  8765 |       |            |           |       |
+|     LUT in front of the register is unused |  4592 |       |            |           |       |
+|     LUT in front of the register is used   |  4173 |       |            |           |       |
 | Unique Control Sets                        |    90 |       |          0 |      8150 |  1.10 |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.

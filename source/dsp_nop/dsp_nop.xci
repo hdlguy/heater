@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "dsp_nop",
     "component_reference": "xilinx.com:ip:dsp_macro:1.0",
-    "ip_revision": "4",
+    "ip_revision": "6",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -100,7 +100,7 @@
       "model_parameters": {
         "C_VERBOSITY": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_MODEL_TYPE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_XDEVICEFAMILY": [ { "value": "artixuplus", "resolve_type": "generated", "usage": "all" } ],
+        "C_XDEVICEFAMILY": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
         "C_HAS_CE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_INDEP_CE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_CED": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -147,33 +147,32 @@
         "C_HAS_PCOUT": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_CONSTANT_1": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_LATENCY": [ { "value": "112", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_OPMODES": [ { "value": "000100111000010100001101", "resolve_type": "generated", "usage": "all" } ],
+        "C_OPMODES": [ { "value": "000000000011010100001101", "resolve_type": "generated", "usage": "all" } ],
         "C_REG_CONFIG": [ { "value": "00000000000000000000000011000100", "resolve_type": "generated", "usage": "all" } ],
         "C_TEST_CORE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "kintexuplus" } ],
+        "ARCHITECTURE": [ { "value": "artix7" } ],
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xcau15p" } ],
-        "PACKAGE": [ { "value": "ffvb676" } ],
+        "DEVICE": [ { "value": "xc7a35ti" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
+        "PACKAGE": [ { "value": "csg324" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
-        "SPEEDGRADE": [ { "value": "-2" } ],
+        "SPEEDGRADE": [ { "value": "-1L" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "I" } ],
-        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
-        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+        "TEMPERATURE_GRADE": [ { "value": "I" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "4" } ],
+        "IPREVISION": [ { "value": "6" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
