@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "srl32",
     "component_reference": "xilinx.com:ip:c_shift_ram:12.0",
-    "ip_revision": "17",
+    "ip_revision": "19",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -24,7 +24,7 @@
         "SCLR": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "SINIT": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "SyncInitRadix": [ { "value": "2", "resolve_type": "user", "enabled": false, "usage": "all" } ],
-        "SyncInitVal": [ { "value": "00000000000000000000000000000000", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
+        "SyncInitVal": [ { "value": "00000000000000000000000000000000", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "SyncCtrlPriority": [ { "value": "Reset_Overrides_Set", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "CEPriority": [ { "value": "Sync_Overrides_CE", "resolve_type": "user", "enabled": false, "usage": "all" } ]
       },
@@ -56,24 +56,24 @@
         "ARCHITECTURE": [ { "value": "artix7" } ],
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xc7a35ti" } ],
+        "DEVICE": [ { "value": "xc7a100t" } ],
         "NEXTGEN_VERSAL": [ { "value": "0" } ],
-        "PACKAGE": [ { "value": "csg324" } ],
+        "PACKAGE": [ { "value": "fgg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
-        "SPEEDGRADE": [ { "value": "-1L" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "I" } ]
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "17" } ],
+        "IPREVISION": [ { "value": "19" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2024.1" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

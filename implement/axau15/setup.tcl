@@ -13,8 +13,7 @@ tclapp::install ultrafast -quiet
 file delete -force ./ip
 file mkdir ./ip
 
-#read_ip ../../source/clk_wiz_uzed/clk_wiz_uzed.xci
-read_ip ../../source/artix_clock_wiz/artix_clock_wiz.xci
+read_ip ../../source/axau15_clock_wiz/axau15_clock_wiz.xci
 read_ip ../../source/artix_vio/artix_vio.xci
 read_ip ../../source/dsp_nop/dsp_nop.xci
 read_ip ../../source/sp_bram/sp_bram.xci
