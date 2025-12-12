@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Sun Nov 16 11:23:37 2025
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Fri Dec 12 09:59:47 2025
 | Host         : ub24 running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -file ./results/utilization.rpt
 | Design       : artix_top
@@ -42,8 +42,10 @@ Table of Contents
 |   Register as Latch        |     0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                   |     0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                   |     0 |     0 |          0 |      8150 |  0.00 |
+| Unique Control Sets        |    90 |       |          0 |      8150 |  1.10 |
 +----------------------------+-------+-------+------------+-----------+-------+
 * Warning! LUT value is adjusted to account for LUT combining.
+** Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
 
 
 1.1 Summary of Registers by Type
@@ -71,9 +73,9 @@ Table of Contents
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 |                  Site Type                 |  Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
-| Slice                                      |  5815 |     0 |          0 |      8150 | 71.35 |
-|   SLICEL                                   |  3916 |     0 |            |           |       |
-|   SLICEM                                   |  1899 |     0 |            |           |       |
+| Slice                                      |  5827 |     0 |          0 |      8150 | 71.50 |
+|   SLICEL                                   |  3922 |     0 |            |           |       |
+|   SLICEM                                   |  1905 |     0 |            |           |       |
 | LUT as Logic                               | 13216 |     0 |          0 |     20800 | 63.54 |
 |   using O5 output only                     |     0 |       |            |           |       |
 |   using O6 output only                     | 13052 |       |            |           |       |
@@ -88,13 +90,11 @@ Table of Contents
 |     using O6 output only                   |  4608 |       |            |           |       |
 |     using O5 and O6                        |     0 |       |            |           |       |
 | Slice Registers                            | 24683 |     0 |          0 |     41600 | 59.33 |
-|   Register driven from within the Slice    | 15938 |       |            |           |       |
-|   Register driven from outside the Slice   |  8745 |       |            |           |       |
-|     LUT in front of the register is unused |  5007 |       |            |           |       |
+|   Register driven from within the Slice    | 15932 |       |            |           |       |
+|   Register driven from outside the Slice   |  8751 |       |            |           |       |
+|     LUT in front of the register is unused |  5013 |       |            |           |       |
 |     LUT in front of the register is used   |  3738 |       |            |           |       |
-| Unique Control Sets                        |    90 |       |          0 |      8150 |  1.10 |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
-* * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
 
 
 3. Memory

@@ -7,7 +7,7 @@ module top (
     localparam Nsrl     = 40;
     localparam Nbram    = 9;
     localparam Ndsp     = 40;
-    localparam Npipe    = 220;
+    localparam Npipe    = 100;
 
     logic axiclk, clk;
     clk_wiz_uzed clk_wiz_inst (.clk_out(clk), .clk_in100(axiclk)); 
