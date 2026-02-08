@@ -1,0 +1,17 @@
+# This file sets up the simulation environment.
+create_project -part xc7vx690tffg1761-2 -force proj 
+set_property target_language Verilog [current_project]
+set_property "default_lib" "work" [current_project]
+create_fileset -simset simset
+
+read_verilog -sv ../source/bram_delay.v
+read_verilog -sv ../source/bram_delay_tb.v
+
+current_fileset -simset [ get_filesets simset ]
+
+set_property -name {xsim.elaborate.debug_level} -value {all} -objects [current_fileset -simset]
+set_property -name {xsim.simulate.runtime} -value {1000ns} -objects [current_fileset -simset]
+
+close_project
+
+
