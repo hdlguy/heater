@@ -1,5 +1,7 @@
 # Script to compile the FPGA all the way to bit file.
 close_project -quiet
+file delete -force results
+file mkdir ./results
 
 open_project proj.xpr
 update_compile_order -fileset sources_1
