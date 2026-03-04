@@ -5,6 +5,8 @@
 #   source compile.tcl
 
 close_project -quiet
+file delete -force results
+file mkdir ./results
 
 open_project proj.xpr
 

@@ -14,12 +14,12 @@
         "Use_AXI_ID": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "AXI_ID_Width": [ { "value": "4", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "Memory_Type": [ { "value": "Single_Port_RAM", "resolve_type": "user", "usage": "all" } ],
-        "PRIM_type_to_Implement": [ { "value": "BRAM", "resolve_type": "user", "enabled": false, "usage": "all" } ],
+        "PRIM_type_to_Implement": [ { "value": "BRAM", "resolve_type": "user", "usage": "all" } ],
         "Enable_32bit_Address": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "ecctype": [ { "value": "No_ECC", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "ECC": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "softecc": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
-        "EN_SLEEP_PIN": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
+        "EN_SLEEP_PIN": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "EN_DEEPSLEEP_PIN": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "EN_SHUTDOWN_PIN": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "EN_ECC_PIPE": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
@@ -81,8 +81,8 @@
         "READ_LATENCY_B": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
-        "C_FAMILY": [ { "value": "kintexuplus", "resolve_type": "generated", "usage": "all" } ],
-        "C_XDEVICEFAMILY": [ { "value": "artixuplus", "resolve_type": "generated", "usage": "all" } ],
+        "C_FAMILY": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
+        "C_XDEVICEFAMILY": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
         "C_ELABORATION_DIR": [ { "value": "./", "resolve_type": "generated", "usage": "all" } ],
         "C_INTERFACE_TYPE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_AXI_TYPE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -155,19 +155,19 @@
         "C_DISABLE_WARN_BHV_RANGE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_COUNT_36K_BRAM": [ { "value": "1", "resolve_type": "generated", "usage": "all" } ],
         "C_COUNT_18K_BRAM": [ { "value": "0", "resolve_type": "generated", "usage": "all" } ],
-        "C_EST_POWER_SUMMARY": [ { "value": "Estimated Power for IP     :     2.232553 mW", "resolve_type": "generated", "usage": "all" } ]
+        "C_EST_POWER_SUMMARY": [ { "value": "Estimated Power for IP     :     2.974355 mW", "resolve_type": "generated", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "kintexuplus", "resolve_type": "generated", "usage": "all" } ],
+        "ARCHITECTURE": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
         "BASE_BOARD_PART": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
         "BOARD_CONNECTIONS": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
-        "DEVICE": [ { "value": "xcau15p", "resolve_type": "generated", "usage": "all" } ],
+        "DEVICE": [ { "value": "xc7a35ti", "resolve_type": "generated", "usage": "all" } ],
         "NEXTGEN_VERSAL": [ { "value": "0", "resolve_type": "generated", "usage": "all" } ],
-        "PACKAGE": [ { "value": "ffvb676", "resolve_type": "generated", "usage": "all" } ],
+        "PACKAGE": [ { "value": "csg324", "resolve_type": "generated", "usage": "all" } ],
         "PREFHDL": [ { "value": "VERILOG", "resolve_type": "generated", "usage": "all" } ],
         "SILICON_REVISION": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED", "resolve_type": "generated", "usage": "all" } ],
-        "SPEEDGRADE": [ { "value": "-2", "resolve_type": "generated", "usage": "all" } ],
+        "SPEEDGRADE": [ { "value": "-1L", "resolve_type": "generated", "usage": "all" } ],
         "STATIC_POWER": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
         "TEMPERATURE_GRADE": [ { "value": "I", "resolve_type": "generated", "usage": "all" } ]
       },
@@ -255,5 +255,5 @@
       }
     }
   },
-  "checksum": "a6cef2d4"
+  "checksum": "5b05ccb4"
 }
