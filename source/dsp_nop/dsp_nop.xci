@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "dsp_nop",
     "component_reference": "xilinx.com:ip:dsp_macro:1.0",
-    "ip_revision": "9",
+    "ip_revision": "10",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -167,12 +167,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "9" } ],
+        "IPREVISION": [ { "value": "10" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2025.2" } ],
+        "SWVERSION": [ { "value": "2026.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -696,5 +696,5 @@
       }
     }
   },
-  "checksum": "869e35be"
+  "checksum": "16c1ff8f"
 }

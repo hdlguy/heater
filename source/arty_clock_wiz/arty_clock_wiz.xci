@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "arty_clock_wiz",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
-    "ip_revision": "17",
+    "ip_revision": "19",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -598,12 +598,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "17" } ],
+        "IPREVISION": [ { "value": "19" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2025.2" } ],
+        "SWVERSION": [ { "value": "2026.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -673,5 +673,5 @@
       }
     }
   },
-  "checksum": "d5fb1ad7"
+  "checksum": "87842869"
 }

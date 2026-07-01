@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="heater_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="heater_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="standard" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="textio" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,046.952 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/heater_tb/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/heater_tb/err_clear">
+      <obj_property name="ElementShortName">err_clear</obj_property>
+      <obj_property name="ObjectShortName">err_clear</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/heater_tb/error">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/heater_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider10" type="divider">
+      <obj_property name="label">uut</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/lfsr_dout">
+      <obj_property name="ElementShortName">lfsr_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">lfsr_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/srl_dout">
+      <obj_property name="ElementShortName">srl_dout[1:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">srl_dout[1:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/bram_dout">
+      <obj_property name="ElementShortName">bram_dout[1:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_dout[1:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/count">
+      <obj_property name="ElementShortName">count[1:0][9:0]</obj_property>
+      <obj_property name="ObjectShortName">count[1:0][9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/dsp_dout">
+      <obj_property name="ElementShortName">dsp_dout[2:0][47:0]</obj_property>
+      <obj_property name="ObjectShortName">dsp_dout[2:0][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/dsp_dout_q">
+      <obj_property name="ElementShortName">dsp_dout_q[2:0][47:0]</obj_property>
+      <obj_property name="ObjectShortName">dsp_dout_q[2:0][47:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/ff_dout">
+      <obj_property name="ElementShortName">ff_dout[4:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ff_dout[4:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/heater_tb/uut/lut_dout">
+      <obj_property name="ElementShortName">lut_dout[4:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">lut_dout[4:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/heater_tb/uut/err_clear_q">
+      <obj_property name="ElementShortName">err_clear_q</obj_property>
+      <obj_property name="ObjectShortName">err_clear_q</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/heater_tb/uut/err_clear_qq">
+      <obj_property name="ElementShortName">err_clear_qq</obj_property>
+      <obj_property name="ObjectShortName">err_clear_qq</obj_property>
+   </wvobject>
+</wave_config>

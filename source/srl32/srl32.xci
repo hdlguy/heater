@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "srl32",
     "component_reference": "xilinx.com:ip:c_shift_ram:12.0",
-    "ip_revision": "20",
+    "ip_revision": "21",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -14,16 +14,16 @@
         "CE": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Width": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Depth": [ { "value": "64", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "DefaultDataRadix": [ { "value": "2", "resolve_type": "user", "usage": "all" } ],
+        "DefaultDataRadix": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DefaultData": [ { "value": "00000000000000000000000000000000", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "ReadMifFile": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "MemInitFile": [ { "value": "no_coe_file_loaded", "resolve_type": "user", "enabled": false, "usage": "all" } ],
-        "AsyncInitRadix": [ { "value": "2", "resolve_type": "user", "usage": "all" } ],
+        "AsyncInitRadix": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "AsyncInitVal": [ { "value": "00000000000000000000000000000000", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "SSET": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "SCLR": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "SINIT": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "SyncInitRadix": [ { "value": "2", "resolve_type": "user", "enabled": false, "usage": "all" } ],
+        "SyncInitRadix": [ { "value": "2", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "SyncInitVal": [ { "value": "00000000000000000000000000000000", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "SyncCtrlPriority": [ { "value": "Reset_Overrides_Set", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "CEPriority": [ { "value": "Sync_Overrides_CE", "resolve_type": "user", "enabled": false, "usage": "all" } ]
@@ -68,12 +68,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "20" } ],
+        "IPREVISION": [ { "value": "21" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2025.2" } ],
+        "SWVERSION": [ { "value": "2026.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -169,5 +169,5 @@
       }
     }
   },
-  "checksum": "50d4aed4"
+  "checksum": "052894ce"
 }
